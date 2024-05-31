@@ -1,6 +1,7 @@
 using ArenaGame;
 using ArenaGame.Heroes;
 using ArenaGame.Weapons;
+using static ArenaGame.GameEngine;
 
 namespace WinFormArenaGame
 {
@@ -21,10 +22,10 @@ namespace WinFormArenaGame
         private void gameNotification(GameEngine.NotificationArgs args)
         {
             TextBox tbAttacker;
-            if (args.Attacker is Knight)
-                tbAttacker = tbKnight;
+            if (args.Attacker == hero1)
+                tbAttacker = tbHero1;
             else
-                tbAttacker = tbAssassin;
+                tbAttacker = tbHero2;
 
             tbAttacker.AppendText(
                 $"{args.Attacker.Name} attacked {args.Defender.Name} with {Math.Round(args.Attack, 2)} and caused {Math.Round(args.Damage, 2)} damage.\r\n");
@@ -36,12 +37,14 @@ namespace WinFormArenaGame
                 Application.DoEvents();
             }
         }
+      
+
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
             lbWinner.Text = "";
-            tbAssassin.Text = "";
-            tbKnight.Text = "";
+            tbHero2.Text = "";
+            tbHero1.Text = "";
             lbWinner.Visible = false;
             hero1.Weapon = weapon1;
             hero2.Weapon = weapon2;
@@ -59,7 +62,7 @@ namespace WinFormArenaGame
 
             lbWinner.Text = $"And the winner is:\n{gameEngine.Winner}";
             lbWinner.Visible = true;
-            
+
         }
 
         private void lbWinner_Click(object sender, EventArgs e)
@@ -117,7 +120,7 @@ namespace WinFormArenaGame
             switch (selectedItem)
             {
                 case "Knight": hero1 = new Knight("Knight", 10, 20); break;
-                case "Assasin": hero1 = new Assassin("Assasin", 10, 5); break;
+                case "Assassin": hero1 = new Assassin("Assassin", 10, 5); break;
                 case "Barbarian": hero1 = new Barbarian("Barbarian", 10, 20); break;
                 case "Archer": hero1 = new Archer("Archer", 5, 30); break;
                 case "Summoner": hero1 = new Summoner("Summoner", 10, 15); break;
@@ -131,7 +134,7 @@ namespace WinFormArenaGame
             switch (selectedItem)
             {
                 case "Knight": hero2 = new Knight("Knight", 10, 20); break;
-                case "Assasin": hero2 = new Assassin("Assasin", 10, 5); break;
+                case "Assassin": hero2 = new Assassin("Assassin", 10, 5); break;
                 case "Barbarian": hero2 = new Barbarian("Barbarian", 10, 20); break;
                 case "Archer": hero2 = new Archer("Archer", 5, 30); break;
                 case "Summoner": hero2 = new Summoner("Summoner", 10, 15); break;

@@ -16,7 +16,9 @@ namespace ArenaGame
             public double Damage { get; set; }
         }
 
+
         public delegate void GameNotifications(NotificationArgs args);
+        public delegate void GameNotifications1(NotificationArgs args,Hero hero);
 
         private Random random = new Random();
         public Hero HeroA { get; set; }

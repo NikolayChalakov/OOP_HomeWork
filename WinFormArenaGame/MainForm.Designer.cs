@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             btnNewGame = new Button();
-            tbKnight = new TextBox();
-            tbAssassin = new TextBox();
+            tbHero1 = new TextBox();
+            tbHero2 = new TextBox();
             imgFight = new PictureBox();
             lbWinner = new Label();
             label1 = new Label();
@@ -57,21 +57,21 @@
             btnNewGame.UseVisualStyleBackColor = true;
             btnNewGame.Click += btnNewGame_Click;
             // 
-            // tbKnight
+            // tbHero1
             // 
-            tbKnight.Location = new Point(23, 35);
-            tbKnight.Multiline = true;
-            tbKnight.Name = "tbKnight";
-            tbKnight.Size = new Size(560, 437);
-            tbKnight.TabIndex = 1;
+            tbHero1.Location = new Point(23, 35);
+            tbHero1.Multiline = true;
+            tbHero1.Name = "tbHero1";
+            tbHero1.Size = new Size(560, 437);
+            tbHero1.TabIndex = 1;
             // 
-            // tbAssassin
+            // tbHero2
             // 
-            tbAssassin.Location = new Point(879, 44);
-            tbAssassin.Multiline = true;
-            tbAssassin.Name = "tbAssassin";
-            tbAssassin.Size = new Size(560, 437);
-            tbAssassin.TabIndex = 2;
+            tbHero2.Location = new Point(879, 44);
+            tbHero2.Multiline = true;
+            tbHero2.Name = "tbHero2";
+            tbHero2.Size = new Size(560, 437);
+            tbHero2.TabIndex = 2;
             // 
             // imgFight
             // 
@@ -171,7 +171,7 @@
             // comboBox3
             // 
             comboBox3.FormattingEnabled = true;
-            comboBox3.Items.AddRange(new object[] { "Knight", "Assasin", "Barbarian", "Archer", "Summoner" });
+            comboBox3.Items.AddRange(new object[] { "Knight", "Assassin", "Barbarian", "Archer", "Summoner" });
             comboBox3.Location = new Point(589, 164);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(106, 28);
@@ -181,7 +181,7 @@
             // comboBox4
             // 
             comboBox4.FormattingEnabled = true;
-            comboBox4.Items.AddRange(new object[] { "Knight", "Assasin", "Barbarian", "Archer", "Summoner" });
+            comboBox4.Items.AddRange(new object[] { "Knight", "Assassin", "Barbarian", "Archer", "Summoner" });
             comboBox4.Location = new Point(767, 164);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(106, 28);
@@ -205,8 +205,8 @@
             Controls.Add(label1);
             Controls.Add(lbWinner);
             Controls.Add(imgFight);
-            Controls.Add(tbAssassin);
-            Controls.Add(tbKnight);
+            Controls.Add(tbHero2);
+            Controls.Add(tbHero1);
             Controls.Add(btnNewGame);
             Name = "MainForm";
             Text = "Arena Game";
@@ -218,8 +218,8 @@
         #endregion
 
         private Button btnNewGame;
-        private TextBox tbKnight;
-        private TextBox tbAssassin;
+        private TextBox tbHero1;
+        private TextBox tbHero2;
         private PictureBox imgFight;
         private Label lbWinner;
         private Label label1;

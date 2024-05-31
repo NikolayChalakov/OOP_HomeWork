@@ -44,6 +44,8 @@
             label4 = new Label();
             comboBox3 = new ComboBox();
             comboBox4 = new ComboBox();
+            label5 = new Label();
+            label6 = new Label();
             ((System.ComponentModel.ISupportInitialize)imgFight).BeginInit();
             SuspendLayout();
             // 
@@ -97,18 +99,18 @@
             label1.AutoSize = true;
             label1.Location = new Point(879, 18);
             label1.Name = "label1";
-            label1.Size = new Size(66, 20);
+            label1.Size = new Size(53, 20);
             label1.TabIndex = 5;
-            label1.Text = "Assassin:";
+            label1.Text = "Enemy";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Location = new Point(23, 9);
             label2.Name = "label2";
-            label2.Size = new Size(55, 20);
+            label2.Size = new Size(42, 20);
             label2.TabIndex = 6;
-            label2.Text = "Knight:";
+            label2.Text = "Hero";
             // 
             // comboBox1
             // 
@@ -188,11 +190,31 @@
             comboBox4.TabIndex = 14;
             comboBox4.SelectedIndexChanged += comboBox4_SelectedIndexChanged;
             // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(620, 141);
+            label5.Name = "label5";
+            label5.Size = new Size(42, 20);
+            label5.TabIndex = 15;
+            label5.Text = "Hero";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(799, 141);
+            label6.Name = "label6";
+            label6.Size = new Size(53, 20);
+            label6.TabIndex = 16;
+            label6.Text = "Enemy";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1464, 504);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(comboBox4);
             Controls.Add(comboBox3);
             Controls.Add(label4);
@@ -232,5 +254,7 @@
         private Label label4;
         private ComboBox comboBox3;
         private ComboBox comboBox4;
+        private Label label5;
+        private Label label6;
     }
 }
